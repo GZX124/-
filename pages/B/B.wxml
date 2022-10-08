@@ -1,0 +1,3 @@
+<!--pages/B/B.wxml-->
+<text>pages/B/B.wxml</text>
+<button class="jmp" bindtap="jmp">去A页面</button>

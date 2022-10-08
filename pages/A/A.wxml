@@ -1,0 +1,15 @@
+<!--pages/A/A.wxml-->
+<text>pages/A/A.wxml</text>
+<view>
+  <button bindtap="SetorageSync">存值SetorageSync</button>
+ <button bindtap="SetStorage">存值setStorage</button>
+
+ <button bindtap="GettorageSync">取值GettorageSync</button>
+ <button bindtap="GetStorage">取值GetStorage</button>
+ <view> 这是本地存储的值StorageSync：{{ StorageSync}}</view>
+ <view> 这是本地存储的值setStorage:{{setStorage}}</view>
+  <button bindtap="goc">去c页面</button>
+  <button bindtap="clear">清除本地缓存的值</button>
+ <view> <text>再清除本地缓存值时，发现的值在本地持久存储setStorage</text></view>
+<view><text>清除值时发现界面不会实时刷新</text></view>
+</view>
