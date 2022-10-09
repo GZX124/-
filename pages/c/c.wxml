@@ -2,5 +2,7 @@
 <text>pages/c/c.wxml</text>
 <button bindtap="clear">清除本地缓存的值</button>
 <button bindtap="goa">去A页面</button>
+<button bindtap="GettorageSync">取值GettorageSync</button>
+ <button bindtap="GetStorage">取值GetStorage</button>
 <view> 这是本地存储的值StorageSync：{{ StorageSync}}</view>
 <view> 这是本地存储的值setStorage:{{setStorage}}</view>

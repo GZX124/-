@@ -23,7 +23,24 @@ goa(){
     url: '/pages/A/A',
   })
 },
-
+  // 读取SetorageSync的值
+  GettorageSync() {
+    this.setData({
+      StorageSync : wx.getStorageSync('key')
+    })
+  },
+  //读取SetStorage的值
+  GetStorage () {
+    var that = this
+    wx.getStorage({
+      key: 'keys',
+      success(res) {
+        that.setData({
+          setStorage:res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
