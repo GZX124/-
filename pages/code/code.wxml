@@ -1,0 +1,4 @@
+<!--pages/code/code.wxml-->
+<button  bindtap="scanCodeEvent">点击进行扫码</button>
+<text>扫码结果：{{scanCode}}</text>
+
