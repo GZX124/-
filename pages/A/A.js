@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    StorageSync:"", //本地存储的值StorageSync 
-    setStorage:"" //本地存储的值setStorage
+    storageSync:"", //本地存储的值storageSync 
+    storage:"" //本地存储的值storage
   },
 
   // 跳转到c页面
@@ -16,30 +16,30 @@ Page({
     })
   },
   // 存储SetorageSync的值
-  SetorageSync(){
+  setStorageSync(){
     wx.setStorageSync('key', "AAAA")
   },
   // 读取SetorageSync的值
-  GettorageSync() {
+  getStorageSync() {
     this.setData({
-      StorageSync : wx.getStorageSync('key')
+      storageSync : wx.getStorageSync('key')
     })
   },
   //存储SetStorage的值
-  SetStorage(){
+  setStorage(){
     wx.setStorage({
       key: "keys",
       data: "aaa"
     })
   },
   //读取SetStorage的值
-  GetStorage () {
+  getStorage() {
     var that = this
     wx.getStorage({
       key: 'keys',
       success(res) {
         that.setData({
-          setStorage:res.data
+          storage:res.data
         })
       }
     })

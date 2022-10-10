@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    StorageSync:"", //本地存储的值StorageSync 
-    setStorage:"" //本地存储的值setStorage
+    storageSync:"", //本地存储的值storageSync 
+    storage:"" //本地存储的值storage
   },
+  // 清除本地缓存的值
 clear(){
   wx.clearStorage("key")
   wx.removeStorage({
@@ -18,25 +19,26 @@ clear(){
   })
   
 },
+// 跳转到A界面
 goa(){
   wx.navigateTo({
     url: '/pages/A/A',
   })
 },
   // 读取SetorageSync的值
-  GettorageSync() {
+  getStorageSync() {
     this.setData({
-      StorageSync : wx.getStorageSync('key')
+      storageSync : wx.getStorageSync('key')
     })
   },
   //读取SetStorage的值
-  GetStorage () {
+  getStorage() {
     var that = this
     wx.getStorage({
       key: 'keys',
       success(res) {
         that.setData({
-          setStorage:res.data
+          storage:res.data
         })
       }
     })
